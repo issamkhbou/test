@@ -1,0 +1,16 @@
+how can go back in time with commits ? 
+git checkout commitID (detached head with no branch ) 
+git branch -b f1 (add a branch to the detached head) 
+
+
+
+git reset HEAD~1 (remove -1 commit and untstage changes ) 
+git reset --soft HEAD~1 (remove -1 commit but with changes staged ) 
+git reset --hard HEAD~1 (remove -1 commit completly )
+
+
+
+if we have the same commits base => created new branch f1 => added commits => want to merge with master => fast forward 
+
+
+if we have different commits base => created new branch f1 => added commits => added commits to the master branch => want to merge  master and f1  => recursive merge 
