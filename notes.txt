@@ -28,3 +28,14 @@ will create a new commit hash with same content
 git push (without branch or repo name) 
 Usually we create a local tracking branch (can be edited ) with the same name as a remote tracking branch 'origin/f1' only used to track the changes in the remote repo (cant be edited) . So we can edit the local copy and use "GIT PUSH' 
 => git branch --track f-branch origin/f-branch 
+
+BRANCHES  in git : 
+local branch :  branch related to a remote tracking branch ||| or just a simple branch locally 
+remote branch : in github  ||| remote tracking branch to not be edited  
+
+git push -u origin master : will automatically create both master remote branch in github and also a local tracking branch and of course a remote tracking branch for master 
+INSTEAD of pushing changed deleting the current branch that we pushed from .. create a new branch based on the remote tracking branch and setting it as the local tracking branch 
+
+#########################################################################################
+
+git push --force origin master (superpass the non fast forward shit ) 
