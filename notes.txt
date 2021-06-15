@@ -13,4 +13,18 @@ git reset --hard HEAD~1 (remove -1 commit completly )
 if we have the same commits base => created new branch f1 => added commits => want to merge with master => fast forward 
 
 
-if we have different commits base => created new branch f1 => added commits => added commits to the master branch => want to merge  master and f1  => recursive merge 
+if we have different commits base => created new branch f1 => added commits => added commits to the master branch => want to merge  master and f1  => recursive merge  => this will create an additional merge commit (that can be undone with git reset --hard HEAD~1 to get cancel the merge ) 
+
+
+git rebase : we have 2 branches with different history commits (f1 and master ) 
+we are currently in the f1 branch => git rebase master => will add the lastest changes to the f1 from the master branch AND then follow up with rest of the commits in the f1 branch 
+
+
+git cheery-pick commitID : just take a specific commit ( a typo fix ) and add it to the head branch 
+will create a new commit hash with same content 
+
+#######################################################################################
+
+git push (without branch or repo name) 
+Usually we create a local tracking branch (can be edited ) with the same name as a remote tracking branch 'origin/f1' only used to track the changes in the remote repo (cant be edited) . So we can edit the local copy and use "GIT PUSH' 
+=> git branch --track f-branch origin/f-branch 
