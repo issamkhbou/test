@@ -39,3 +39,7 @@ INSTEAD of pushing changed deleting the current branch that we pushed from .. cr
 #########################################################################################
 
 git push --force origin master (superpass the non fast forward shit ) 
+
+!!!!! DELETE !!!!!! 
+git push origin --delete testingBranch
+git branch -d testingBranch
